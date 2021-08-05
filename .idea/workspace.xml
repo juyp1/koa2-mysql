@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92f735ed-c6a9-4300-b126-c1ae8c26b0b6" name="默认变更列表" comment="" />
+    <list default="true" id="b6eb5a3d-00c6-401d-b58f-e3bcfb382469" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/blogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/blogs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/blogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/model/blogmodel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/model/blogmodel.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +32,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="1vvjT2t9W8k7ugij3N3nNNOpQqF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1wEyNTJ7LWNmn3SkhAGbDBi55ci" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,44 +41,34 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/db" />
-      <recent name="$PROJECT_DIR$/src/conf/model" />
-      <recent name="$PROJECT_DIR$/src/conf" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="92f735ed-c6a9-4300-b126-c1ae8c26b0b6" name="默认变更列表" comment="" />
-      <created>1627449462627</created>
+      <changelist id="b6eb5a3d-00c6-401d-b58f-e3bcfb382469" name="默认变更列表" comment="" />
+      <created>1628038004660</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1627449462627</updated>
-      <workItem from="1627449464244" duration="5450000" />
-      <workItem from="1627546625869" duration="1253000" />
-      <workItem from="1627868989393" duration="15000" />
-      <workItem from="1627952273701" duration="9333000" />
-      <workItem from="1627970511276" duration="731000" />
-      <workItem from="1627971958722" duration="76000" />
-      <workItem from="1627973413168" duration="2136000" />
-      <workItem from="1627977270582" duration="1783000" />
-      <workItem from="1627981142506" duration="236000" />
+      <updated>1628038004660</updated>
+      <workItem from="1628038006785" duration="1607000" />
+      <workItem from="1628128736292" duration="5501000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

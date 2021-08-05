@@ -8,7 +8,7 @@ const logger = require('koa-logger')
 const koajwt = require('koa-jwt');
 const index = require('./routes')
 const users = require('./routes/users')
-
+const blogs = require('./routes/blogs')
 const cors = require('koa2-cors'); //跨域处理
 // error handler
 onerror(app)
@@ -45,7 +45,7 @@ app.use((ctx, next) => {
 app.use(koajwt({
   secret: 'my_token'
 }).unless({
-  path: [/\/pc\/signin/,/\/users\/register/]
+  path: [/\/pc\/signin/,/\/users\/register/,/\/blog\/list/]
 }));
 // middlewares
 app.use(bodyparser({
@@ -70,7 +70,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
-
+app.use(blogs.routes(),blogs.allowedMethods())
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)

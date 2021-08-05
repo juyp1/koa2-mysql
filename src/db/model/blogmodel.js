@@ -2,11 +2,8 @@
 const Sequelize = require('sequelize')
 const seq = require('../seq')
 
-const blogs =  seq.define('users', {
-    uid:{
-        type:Sequelize.STRING,
-        defaultValue: Sequelize.UUIDV4 // 或 Sequelize.UUIDV1
-    },
+const Blogs =  seq.define('blogs', {
+
     title:{
         type:Sequelize.STRING,
         allowNull: false,
@@ -22,4 +19,17 @@ const blogs =  seq.define('users', {
         allowNull: false,
         comment:"用户"
     }
+}, {
+    freezeTableName: true,
+    // 不要忘记启用时间戳！
+    timestamps: true,
+    // 不想要 createdAt
+    createdAt: false,
+
+    // 想要 updatedAt 但是希望名称叫做 updateTimestamp
+    updatedAt: false
 })
+
+module.exports = {
+    Blogs,
+}
