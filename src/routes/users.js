@@ -1,5 +1,5 @@
 const router = require('koa-router')()
-const {register} = require('../controller/users')
+const {register,upPassword} = require('../controller/users')
 router.prefix('/users')
 const jwt = require('jsonwebtoken')
 router.post('/signin',(ctx,next)=>{
@@ -23,5 +23,13 @@ router.post('/signin',(ctx,next)=>{
          nickname
      })
  })
+router.post('/uppass',async (ctx,next)=>{
+    const {userid,upass}= ctx.request.body
+    ctx.body = await upPassword({
+        userid,
+        upass,
+
+    })
+})
 
 module.exports = router

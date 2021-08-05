@@ -45,7 +45,7 @@ app.use((ctx, next) => {
 app.use(koajwt({
   secret: 'my_token'
 }).unless({
-  path: [/\/pc\/signin/,/\/users\/register/,/\/blog\/list/]
+  path: [/\/pc\/signin/,/\/users\/register/,/\/users\/uppass/,/\/blog\/list/,/\/blog\/add/]
 }));
 // middlewares
 app.use(bodyparser({

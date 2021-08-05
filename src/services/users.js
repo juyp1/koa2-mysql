@@ -11,6 +11,18 @@ async function  createUser({username,upass,nickname}){
     return data;
 }
 
+async  function editUser ({userid,upass}){
+    const result = await Users.update({
+        upass
+    },{
+        where:{
+            uid:userid
+        }
+    })
+    const data = result.dataValues
+    return data;
+}
+
 async  function  getUserInfo(username){
     const result = await Users.findOne({
         attributes: ['uid', 'username', 'nickname'],
@@ -27,5 +39,6 @@ async  function  getUserInfo(username){
 }
 module.exports = {
     createUser,
+    editUser,
     getUserInfo
 }
