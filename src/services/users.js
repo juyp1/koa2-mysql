@@ -1,5 +1,6 @@
 const {Users} = require('../db/model/usermodel')
 const uuid = require('uuid')
+
 async function  createUser({username,upass,nickname}){
     const result = await Users.create({
         uid:uuid.v4(),
@@ -37,8 +38,24 @@ async  function  getUserInfo(username){
     return result.dataValues
 
 }
+
+async function  getsignin(username,userpass){
+    const result = await Users.findOne({
+        attributes: ['uid', 'username', 'nickname'],
+        where:{
+            username,
+            upass:userpass
+        }
+    })
+    if (result == null) {
+        // 未找到
+        return result
+    }
+    return result.dataValues
+}
 module.exports = {
     createUser,
     editUser,
-    getUserInfo
+    getUserInfo,
+    getsignin
 }

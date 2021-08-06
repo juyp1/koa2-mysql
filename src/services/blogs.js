@@ -1,6 +1,6 @@
 const {Blogs} = require('../db/model/blogmodel')
 const {Users} = require('../db/model/usermodel')
-const uuid = require('uuid')
+
 
 // 分页
 async function getBlogsList(username, pageIndex = 0, pageSize = 10) {
@@ -14,7 +14,6 @@ async function getBlogsList(username, pageIndex = 0, pageSize = 10) {
         include: [{
             model: Users,
             attributes: ['username', 'nickname'],
-
         }],
         subQuery: false   //不让在子查询分页
     })

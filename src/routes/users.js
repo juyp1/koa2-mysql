@@ -1,18 +1,9 @@
 const router = require('koa-router')()
-const {register,upPassword} = require('../controller/users')
+const {register,upPassword,usignin} = require('../controller/users')
 router.prefix('/users')
-const jwt = require('jsonwebtoken')
-router.post('/signin',(ctx,next)=>{
-    const token = jwt.sign({
-        name:'lisi',
-        _id: 1
-    }, 'my_token', { expiresIn: '2h' });
-    ctx.body = {
-        code: '000001',
-        data: token,
-        msg: '登录成功'
-    }
-
+router.post('/signin', async(ctx,next)=>{
+    const {userpass,username}= ctx.request.body
+    ctx.body = await usignin(username,userpass)
 })
 
  router.post('/register',async (ctx,next)=>{

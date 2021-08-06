@@ -1,29 +1,33 @@
-
 const Sequelize = require('sequelize')
 const seq = require('../seq')
 const _moment = require('moment')
-const Blogs =  seq.define('blogs', {
-
-    title:{
-        type:Sequelize.STRING,
+const Uscore = seq.define('uscore', {
+    scoreid: {
+        type: Sequelize.STRING,
+        defaultValue: Sequelize.UUIDV4, // 或 Sequelize.UUIDV1
         allowNull: false,
-        comment:"文章标题"
     },
-    content:{
-        type:Sequelize.TEXT,
+    scorenum: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        comment:"文章内容"
+        comment: '积分'
     },
-    userid:{
-        type:Sequelize.STRING,
+    uid: {
+        type: Sequelize.STRING,
         allowNull: false,
-        comment:"用户"
+        comment: '用户id'
+    },
+    describe: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        comment: '积分描述'
     },
     createtime: {
         type: Sequelize.STRING,
         defaultValue: _moment().format("YYYY-MM-DD HH:mm:ss"),
         comment: '创建时间'
     }
+
 }, {
     freezeTableName: true,
     // 不要忘记启用时间戳！
@@ -34,7 +38,6 @@ const Blogs =  seq.define('blogs', {
     // 想要 updatedAt 但是希望名称叫做 updateTimestamp
     updatedAt: false
 })
-
 module.exports = {
-    Blogs,
+    Uscore
 }

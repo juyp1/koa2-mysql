@@ -1,6 +1,7 @@
 
 const Sequelize = require('sequelize')
 const seq = require('../seq')
+const _moment = require('moment')
 const Users= seq.define('users', {
     uid:{
         type:Sequelize.STRING,
@@ -19,8 +20,8 @@ const Users= seq.define('users', {
         type: Sequelize.STRING,
     },
     createtime:{
-        type:Sequelize.DATE,
-        defaultValue: Sequelize.NOW
+        type:Sequelize.STRING,
+        defaultValue: _moment().format("YYYY-MM-DD HH:mm:ss")
     }
 }, {
     freezeTableName: true,

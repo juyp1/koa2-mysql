@@ -1,6 +1,7 @@
 const seq = require('./seq')
-require('./model/usermodel')
-require('./model/blogmodel')
+// require('./model/usermodel')
+// require('./model/blogmodel')
+require('./model/uscoremodel')
 // 测试链接
 seq.authenticate().then(()=>{
     console.log('链接成功')
